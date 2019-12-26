@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>TuniWeb</title>
+                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+              
+            
+           
+</head>
+<style>
+body{
+    background-image:url("bg2.jpg");
+    background-size:cover;
+     background-attachment:fixed;
+}
+.card{
+  display: flex;
+  margin:auto;
+}
+.btt{
+  display: flex;
+  margin:auto;
+  box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.36);
+
+}
+.form-group{
+  margin-top:10%;
+  margin:20px;
+}
+.bt{
+  display: flex;
+  margin:auto;
+  margin-top:10%;
+  box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.36);
+}
+</style>
+<body>
+  <div class="alert alert-success succ" role="alert" style="width: 22rem;margin-left:38%;display:none; box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.36);">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Your registration was done successfully ! </p>
+    <a href="sign.html"><button type="button" class="btn btn-success" style="display:flex;margin:auto;  box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.36);">Sign In</button></a>
+  </div>
+
+        <p class="h1" style="text-align: center;margin-top:5%;color:aliceblue;text-shadow: 2px 2px 4px #000000;">REGISTER NOW<p>    
+          <div class="card" style="width: 25rem;height: 33rem;background-color:antiquewhite;box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.75);">
+            <div class="card-body form">
+              <button type="button" class="btn btn-primary btt">Click Here to Register</button>
+              <div class="form-group ff" style="display:none;">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control name" id="formGroupExampleInput" >
+                <span id="error"></span>
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+                <label for="formGroupExampleInput">Phone Number</label>
+                <input type="number" class="form-control" id="formGroupExampleInput"min="0" >
+                <button type="submit" class="btn btn-primary bt">Register</button>
+                <small id="emailHelp" class="form-text text-muted">You already have an account?<a href="sign.html">Sign in</a></small>
+              </div>
+            </div>
+          </div>
+            
+     
+                   
+</body>
+<script>
+ 
+$(document).ready(function(){
+  $(".btt").click(function(){
+    $(".ff").fadeIn("slow");
+  });
+  $(".btt").click(function(){
+    $(this).fadeOut("3000");
+  });
+  $(".bt").click(function(){
+    $(".card").fadeOut("slow");
+    $(".h1").fadeOut("slow");
+    $(".succ").fadeIn("slow");
+    
+  });
+});
+
+
+</script>
+
+</html>
